@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    /* width: 100vw; */
+    /* max-width: 1440px; */
+    min-height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar Section */
+nav {
+    background: black;
+    box-shadow: 3px 3px 5px rgba(255, 238, 238, 0.5);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+nav li {
+    height: 3.2em;
+    list-style: none;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 3em;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+nav a:hover {
+    color: rgb(225, 0, 0);
+    /* background-color: rgba(190, 198, 202, 0.1); */
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+.logo {
+    color: rgb(225, 0, 0);
+}
+
+/* Side Bar Section */
+.side-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 16em;
+    z-index: 999;
+    background: rgb(20, 19, 19);
+    box-shadow: -3px 0 5px rgba(255, 238, 238, 0.5);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Hero Section */
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3em;
+}
+.hero .hero-text {
+    width: 50%;
+    padding: 3em 0;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    width: 12em;
+    line-height: 1.2;
+    color: rgb(225, 0, 0);
+    text-transform: uppercase;
+}
+.hero p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2em;
+    width: 30em;
+    line-height: 1.5;
+}
+.hero .hero-text button {
+    padding: 0.5em 2em;
+    border: solid 2px rgb(225, 0, 0);
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.hero .hero-text button:hover {
+    background: rgb(225, 0, 0);
+    color: white;
+}
+.hero .hero-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-image .bg-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Collection Section */
+.collection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    text-align: center;
+}
+
+.collection-text h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    color: rgb(225, 0, 0);
+}
+.collection-text p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    width: 30em;
+}
+
+.collection-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.collection-item {
+    width: 20em;
+    height: 33em;
+    margin: 1em;
+    background: rgb(20, 19, 19);
+    box-shadow: 3px 3px 5px rgba(255, 238, 238, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.collection-item img {
+    max-width: 100%;
+    height: auto;
+}
+#white-wear{
+    height: 100%;
+}
+.collection-item h3  {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0.5em 0;
+    color: rgb(254, 252, 252);
+}
+.collection-item p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+    width: 80%;
+    line-height: 1.5;
+}
+
+/* About Us Section */
+.about {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 3em;
+    text-align: center;
+    background: rgb(20, 19, 19);
+    margin: 2em auto;
+    box-shadow: 0 0 20px rgba(255, 238, 238, 0.5);
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    color: rgb(225, 0, 0);
+}
+.about-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 30em;
+    line-height: 2;
+}
+
+/* Shop Section */
+.shop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    text-align: center;
+    background: rgb(250, 249, 249);
+}
+.shop-text h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    color: rgb(225, 0, 0);
+}
+.shop-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    width: 30em;
+    color: rgb(20, 19, 19);
+}
+.shop-items {
+    display: grid;
+    width: 70%;
+    padding: 0 1em;
+}
+.shop-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    padding: 1em 0;
+}
+.dresses, .tops, .accessories, .mens-wear, .kids {
+    width: 95%;
+    background: rgb(98, 104, 98);
+}
+.dresses img, .tops img, .accessories img, .mens-wear img, .kids img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.dresses h3, .tops h3, .accessories h3, .mens-wear h3, .kids h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0.1em 0;
+    color: rgb(254, 252, 252);
+}
+.dresses p, .tops p, .accessories p, .mens-wear p, .kids p {
+    display: inline;
+    font-size: 0.8rem;
+    font-weight: 300;   
+    margin-bottom: 0.5em;
+    width: 100%;
+    line-height: 1.5;
+}
+    #beautiful-gown, #fascinating-gown, #flay, #sleeve, #complete, #cute, #gold, #full, #line, #excellent, #for, #brilliant, #young, #dress, #gurve, #purple, #vintage {
+        height: 80%;
+    }
+
+/* Newsletter Section */
+.newsletter {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    background: rgb(254, 252, 252);
+    color: rgb(20, 19, 19);
+}
+.newsletter h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    color: rgb(225, 0, 0);
+    text-align: center;
+}
+.newsletter p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 30em;
+    line-height: 1.5;
+    text-align: center;
+}
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+.newsletter input[type="email"] {
+    padding: 0.5em 1em;
+    border: solid 2px rgb(20, 19, 19);
+    border-radius: 5px;
+    width: 20em;
+    font-size: 1rem;
+    margin-right: 1em;
+}
+.newsletter input[type="email"]:focus {
+    outline: none;
+    border-color: rgb(225, 0, 0);
+}
+.newsletter button {
+    padding: 0.5em 2em;
+    border: none;
+    background: rgb(225, 0, 0);
+    color: rgb(254, 252, 252);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    background: rgb(20, 19, 19);
+    color: rgb(225, 0, 0);
+}
+.contact h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form input[type="number"] {
+    padding: 0.5em 1em; 
+    border: solid 2px rgb(20, 19, 19);
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+.contact form input[type="text"]:focus,
+.contact form input[type="email"]:focus,
+.contact form input[type="number"]:focus {
+    border-color: rgb(225, 0, 0);
+}
+#message {
+    height: 9em;
+    padding: 0 1em 0.5em;
+    border: solid 2px rgb(20, 19, 19);
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+}
+#message::placeholder {
+    vertical-align: top;
+    text-align: left;
+}
+#message:focus {
+    outline: none;
+    border-color: rgb(225, 0, 0);
+}
+.contact .form-div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.contact form .form-div1 {
+    width: 50%;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.contact form .form-div2 {
+    width: 50%;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form button {
+    padding: 0.5em 2em;
+    border: none;
+    background: rgb(225, 0, 0);
+    color: rgb(254, 252, 252);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    background: black;
+    color: rgb(254, 252, 252);
+    padding: 2em;
+    text-align: center;
+}
+.footer .footerdiv {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerdiv .logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(225, 0, 0);
+    padding-bottom: 3em;
+}
+.footerdiv .logo a {
+    color: rgb(225, 0, 0);
+    text-decoration: none;
+}
+
+.footerdiv .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.footer-links p a {
+    text-decoration: none;
+    color: rgb(254, 252, 252);
+}
+
+.footerdiv .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 4%;
+    padding-bottom: 3em;
+}
+.socials .social-icon {
+    width: 100%;
+    height: 2em;
+    cursor: pointer;
+}
+
+.socials .social-img:hover{
+    transform: scale(1.5);
+    filter: hue-rotate(90deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.copyright {
+    width: 100%;
+    margin-top: 3em;
+    font-size: 0.8rem;
+    color: rgb(225, 0, 0);
+}
+/* Responsive Section */
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .hero {
+    display: flex;
+    flex-direction: column;
+    }
+    .hero .hero-text {
+    width: 100%;
+    padding: 1.5em 0;
+}
+    .hero .hero-image {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* About Section */
+    .about {
+    width: 80%;
+    padding: 2em;
+}
+
+    /* Shop Section */
+    .shop-list {
+    grid-template-columns: repeat(3, 1fr);
+}
+.dresses, .tops, .accessories, .mens-wear, .kids {
+    width: 95%;
+    background: rgb(98, 104, 98);
+    margin: 0.2em 0;
+}
+    .shop-items {
+        width: 90%;
+    }
+    .shop-text h2 {
+        font-size: 1.8rem;
+    }
+    .shop-text p {
+        font-size: 1.1rem;
+        width: 20em;
+    }
+    .shop-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #flay, #sleeve, #cute, #gold, #full, #dress, #gurve, #purple, #vintage, #tops, #dark-green-gown, #evening-gown, #stunning-gown, #beautiful, #nice, #luxury, #royalty, #complete {
+        height: 80%;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 3em 0;
+        background: rgb(254, 252, 252);
+        color: rgb(20, 19, 19);
+    }
+
+    /* Footer Section */
+    .footer {
+        padding: 2em 1em;
+    }
+    .footer .footerdiv {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .footerdiv .logo {
+        padding-bottom: 1em;
+    }
+    .footerdiv .footer-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5em;
+    }
+    .footer-links p {
+        font-size: 0.9rem;
+        color: rgb(254, 252, 252);
+    }
+    .socials {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+        padding-bottom: 0;
+        margin-top: 3em;
+    }
+    .socials .social-icon {
+        width: 2em;
+        height: 2em;
+    }
+    .copyright {
+    margin-top: 2em;
+}
+}
+
+@media (max-width: 435px) {
+    .hero h1 {
+        font-size: 1.9rem;
+        width: 12em;
+    }
+    .hero p {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .hero .hero-text button {
+        padding: 0.5em 1em;
+        font-size: 0.8rem;
+    }
+
+    /* Collection Section */
+    .collection-text h2 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .collection-text p {
+        font-size: 1rem;
+        width: 100%;
+    }
+    .collection-item {
+        width: 15em;
+        height: 30em;
+    }
+    .collection-item h3 {
+        font-size: 1.2rem;
+    }
+    #transparent-wear {
+        height: 100%;
+    }
+    #white-gown {
+        height: 100%;
+    }
+
+    /* About Section */
+    .about {
+        width: 90%;
+        padding: 2em;
+    }
+    .about-text p {
+        font-size: 1.1rem;
+        width: 15em;
+    }
+
+    /* Shop Section */
+    .shop-text h2 {
+        font-size: 1.5rem;
+    }
+    .shop-text p {
+        font-size: 1rem;
+        width: 15em;
+    }
+    .shop-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+        #flay, #sleeve, #cute, #gold, #full, #dress, #gurve, #purple, #vintage {
+        height: 70%;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 3em 0;
+        background: rgb(254, 252, 252);
+        color: rgb(20, 19, 19);
+    }
+    .newsletter h2 {
+        font-size: 1.5rem;
+    }
+    .newsletter p {
+        font-size: 1rem;
+        width: 22em;
+    }
+    .newsletter form {
+        display: block;
+        padding: 0 3.3em;
+    }
+    .newsletter input[type="email"] {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    .newsletter button {
+        margin: 0 5em;
+    }
+
+    /* Contact Section */
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+    .contact .form-div {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    }
+    .contact form .form-div1 {
+    width: 90%;
+    padding-right: 0;
+    margin-left: 1.4em;
+    gap: 0.5em;
+    }
+    .contact form .form-div2 {
+        width: 90%;
+        padding-left: 0;
+        margin-left: 1.4em;
+        margin-top: 0.5em;
+    }
+    .contact form textarea, .contact form input {
+    width: 100%;
+    }
+    .contact form button {
+        width: 50%;
+        margin: 0 auto;
+        padding: 0.5em 0;
+        margin-top: 1em;
+    }
+
+    /* Footer Section */
+    .socials {
+        margin-top: 3em;
+    }
+    .socials .social-icon {
+        width: 2em;
+        height: 2em;
+    }
+    .copyright {
+    margin-top: 1em;
+}
+}
+
+@media (max-width:400px) {
+    .side-bar {
+        width: 100%;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .hero p {
+        font-size: 0.7rem;
+        width: 100%;
+    }
+
+    /* Collection Section */
+    .collection-text h2 {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .collection-text p {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    /* About Section */
+    .about {
+        width: 90%;
+        padding: 2em;
+    }
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+    /* Shop Section */
+    .shop-text h2 {
+        font-size: 1.5rem;
+    }
+    .shop-text p {
+        font-size: 1rem;
+        width: 19em;
+    }
+    .shop-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+        #sleeve, #cute, #complete {
+        height: 85%;
+    }
+    #flay, #cute, #gold, #full, #dress, #gurve, #purple, #vintage {
+        height: 80%;
+    }
+
+    /* Newsletter Section */
+    .newsletter h2 {
+        font-size: 1.5rem;
+    }
+    .newsletter p {
+        font-size: 1rem;
+        width: 22em;
+    }
+    .newsletter form {
+        display: block;
+        padding: 0 1.8em;
+    }
+    .newsletter button {
+        margin-left: 5.5em;
+    }
+
+    /* Contact Section */
+    .contact form .form-div1, .contact form .form-div2 {
+    margin-left: 1.3em;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Newsletter Section */
+    .newsletter p {
+        width: 15em;
+    }
+    .newsletter form {
+        display: block;
+        margin-left: 0;
+        padding: 0 2em;
+    }
+    .newsletter input[type="email"] {
+        width: 100%;
+        margin-right: 0;
+    }
+    .newsletter button {
+        margin: 0 4em;
+    }
+
+    /* Contact Section */
+    .contact form .form-div1, .contact form .form-div2 {
+    margin-left: 1em;
+    }
+}
